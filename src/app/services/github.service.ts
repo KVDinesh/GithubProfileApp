@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class GithubService {
   private username;
 
-  constructor(private _http:Http) 
+  constructor(public _http:Http) 
   {
      this.username = 'KVDinesh'
   }
