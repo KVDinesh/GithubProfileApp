@@ -9,11 +9,17 @@ import { GithubService } from "../../services/github.service";
 })
 export class ProfileComponent implements OnInit {
   public user=[];
+  public repos=[];
   constructor(private _githubservice:GithubService) 
   { 
     this._githubservice.getUser().subscribe(user => 
       {
         this.user=user;
+      })
+
+      this._githubservice.getRepos().subscribe(repos => 
+      {
+        this.repos=repos;
       })
   }
 
